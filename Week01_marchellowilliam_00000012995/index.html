@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+		<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script src="index.js"></script>
+		<link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    	<title></title>
+</head>
+<body>
+<ion-app>
+	<ion-header >
+	<ion-toolbar color= primary>
+		<ion-title text-center >
+            Budget Planner
+		</ion-title>
+	</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+	  <ion-card style="width: 60%; display:block; margin: 5% auto 5%;">
+        <ion-card-header>
+         
+            <ion-card-title>Input Pengeluaran</ion-card-title>
+          </ion-card-header>
+        
+            <ion-card-content>
+                  <ion-input id="input" placeholder="Nama Pengeluaran"></ion-input>
+                  <ion-input id="input2" placeholder="Jumlah Pengeluaran"></ion-input> 
+                  </br>
+                    <div style="float:right;">
+                        <ion-button  id="hapus" onclick="clearr()" fill="outline" color="danger" size="small"><ion-icon name="close"></ion-icon> Hapus</ion-button>
+                        <ion-button  id="tambah" onclick="tambah()" color="primary" size="small"><ion-icon name="add"></ion-icon> Tambah</ion-button>    
+                    </div>
+                  <ion-alert-controller></ion-alert-controller>
+            </ion-card-content>
+
+
+      </ion-card>
+      <div style="padding-left:20%;">
+        <ion-list id="list" >
+            <ion-item>
+            </ion-item>
+        </ion-list>
+      </div>
+
+      <ion-text text-center><h3 id="jumlah">Total Pengeluaran : Rp. 0,00</h3></ion-text>
+
+
+
+		
+	</ion-content>
+
+</ion-app>	
+</body>
+</html>
