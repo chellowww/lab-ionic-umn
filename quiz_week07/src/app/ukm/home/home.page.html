@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let u of loadedUkm">
+          <ion-card-header>
+            <ion-card-title>{{ u.title }}</ion-card-title>
+          </ion-card-header>
+         
+          <ion-card-content>
+            <p>{{ u.description }}</p>
+          </ion-card-content>
+          <div text-right padding>
+            <ion-button 
+              fill="clear"
+              color="primary" (click)="save(u)">Join</ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
